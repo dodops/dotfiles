@@ -43,6 +43,7 @@ set inccommand=split
 set showmatch
 set syntax=enable
 set encoding=utf-8
+set clipboard=unnamed
 
 " Tab config
 set expandtab
@@ -102,6 +103,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Elixir support
 Plug 'elixir-lang/vim-elixir'
+Plug 'mhinz/vim-mix-format'
 
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
@@ -121,6 +123,9 @@ Plug 'jacoborus/tender.vim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'joshdick/onedark.vim'
 call plug#end()
+
+" Run mix format on save
+let g:mix_format_on_save = 1
 
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
@@ -167,8 +172,8 @@ if (has("termguicolors"))
 endif
 
 set background=dark
-colorscheme gruvbox
-let g:airline_theme='gruvbox'
+colorscheme tender
+let g:airline_theme='tender'
 let g:solarized_termcolors=256
 let g:ag_working_path_mode="r"
 
