@@ -44,6 +44,7 @@ set showmatch
 set syntax=enable
 set encoding=utf-8
 set clipboard=unnamed
+set splitright
 
 " Tab config
 set expandtab
